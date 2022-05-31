@@ -16,7 +16,7 @@
     const handleToggleModal = () => {
         showModal = !showModal;
     };
-
+    let sResult = "";
     async function trackShipment() {
         //const now = await api.query.timestamp.now();
         console.log(typeof shipId, api.query.assetTracking.uidToShipment);
@@ -27,7 +27,7 @@
 
         await bBusy.update((x) => false);
 
-        let sResult = result.toString();
+        sResult = result.toString();
 
         if (sResult.length == 0) {
             routes = [];
@@ -36,6 +36,7 @@
             destination = "";
             status = "";
 
+            //Show alert
             showModal = true;
             title="Error!";
             error = "Shipment not found";
@@ -80,7 +81,7 @@
         Track Shipment
     </a>
 </div>
-
+{#if sResult.length > 0}
 <div class="text-base font-bold grid grid-cols-2 gap-4">
     <div class="my-4">
         Status <span
@@ -131,3 +132,4 @@
         </ul>
     </div>
 </div>
+{/if}
