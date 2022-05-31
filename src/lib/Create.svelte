@@ -46,7 +46,7 @@
         if (!api || routes.length < 3 ) return;
 
 
-        const ctxn = api.tx.assetTracking.createShipment(routes);
+        const ctxn = api.tx.assetTracking.createShipment(destination);
 
         const SENDER = oAccount.address;
 
@@ -122,35 +122,6 @@
                             autocomplete="family-name"
                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-4">
-                        <div class="shadow-lg rounded-2xl bg-white  w-full">
-                            <p class="font-bold text-md p-4 text-black ">
-                                Route
-                                <span class="text-sm text-gray-500 ">
-                                    ( {routes.length} )
-                                </span>
-                            </p>
-                            <ul>
-                                {#each routes as route, i}
-                                    <li
-                                        class="flex items-center text-gray-600  justify-between py-3 border-b-2 border-gray-100 "
-                                    >
-                                        <div
-                                            class="flex items-center justify-start text-sm"
-                                        >
-                                            <span class="mx-4">
-                                                {i + 1}
-                                            </span>
-                                            <span>
-                                                {route}
-                                            </span>
-                                        </div>
-                                    </li>
-                                {/each}
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
