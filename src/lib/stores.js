@@ -8,6 +8,7 @@ import {
 
 import { writable } from 'svelte/store';
 
+export const bBusy = writable(false);
 export const account = writable('');
 export const selectedTab = writable('c');
 

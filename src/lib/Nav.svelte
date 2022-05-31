@@ -59,6 +59,8 @@
 
             <a href="#" name="t" on:click="{changeTab}"  class:bg-gray-900="{sTab == 't'}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Track Shipment</a>
 
+            <a href="#" name="u" on:click="{changeTab}"  class:bg-gray-900="{sTab == 'u'}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">Update Shipment</a>
+
           </div>
         </div>
       </div>
