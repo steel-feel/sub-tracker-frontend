@@ -4,6 +4,7 @@
   import Nav from "./lib/Nav.svelte";
   import Create from "./lib/Create.svelte";
   import Track from "./lib/Track.svelte";
+  import Update from "./lib/Update.svelte"
 
   import { onMount } from "svelte";
 
@@ -37,6 +38,8 @@ let selTab = 'c';
     <Create />
     {:else if selTab === "t"}
     <Track />
+    {:else if selTab === "u"}
+    <Update />
     {/if}
   </div>
 </main>
